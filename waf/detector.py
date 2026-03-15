@@ -2,6 +2,7 @@ from rules import sqli
 from rules import xss
 from rules import ssti
 from rules import lfi
+from rules import rfi
 
 def detect_attack(payload):
 
@@ -13,5 +14,7 @@ def detect_attack(payload):
 		return "SSTI"
 	if lfi.detect_lfi(payload):
 		return "LFI"
-		
+	if rfi.detect_rfi(payload):
+		return "RFI"
+			
 	return None
