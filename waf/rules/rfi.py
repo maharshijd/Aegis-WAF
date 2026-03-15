@@ -125,4 +125,5 @@ tests = [
 
 for t in tests:
     print(f"{t} -> {detect_rfi(t)}")
+
 '''
