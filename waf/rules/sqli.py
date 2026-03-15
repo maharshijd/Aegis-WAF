@@ -23,9 +23,10 @@ def detect_sqli(text):
     normalized = normalize_input(text)
     return bool(sqli_pattern.search(normalized))
 
-
+'''
 print(detect_sqli("select${IFS}name${IFS}FROM${IFS}users"))  # True
 print(detect_sqli("UNION/**/SELECT"))                        # True
 print(detect_sqli("UNION%0ASELECT"))                         # True
 print(detect_sqli("union/*!500000select*/1,user() #"))       # True
 print(detect_sqli("please select a color"))                  # False
+'''
