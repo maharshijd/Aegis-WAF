@@ -15,26 +15,22 @@ def normalize_input(text):
 
 
 ssti_pattern = re.compile(
-r"(\{\{.*?\}\}"                         # {{ ... }} (Jinja2, Twig)
-r"|\{%\s*.*?\s*%\}"                     # {% ... %} (Jinja2 blocks)
-r"|\$\{.*?\}"                           # ${ ... } (Freemarker, JSP)
-r"|#\{.*?\}"                            # #{ ... } (Thymeleaf)
-r"|<%=?\s*.*?\s*%>"                     # <% ... %> or <%= ... %> (JSP/ERB)
-r"|@\{.*?\}"                            # @{ ... } (Razor)
-r"|@\(.+?\)"                            # @( ... )
+r"(\{\{.*?\}\}"                         
+r"|\{%\s*.*?\s*%\}"                     
+r"|\$\{.*?\}"                           
+r"|#\{.*?\}"                            
+r"|<%=?\s*.*?\s*%>"                     
+r"|@\{.*?\}"                            
+r"|@\(.+?\)"                            
 
-# universal SSTI polyglot
 r"|\$\{\{<%[%\'\"}}%\\\."
 
-# math expressions used in detection
 r"|\{\{\s*\d+\s*[\*\+\-\/]\s*\d+\s*\}\}"
 r"|\$\{\s*\d+\s*[\*\+\-\/]\s*\d+\s*\}"
 r"|#\{\s*\d+\s*[\*\+\-\/]\s*\d+\s*\}"
 
-# error based detection
 r"|\(1\s*/\s*0\)"
 
-# python template engines
 r"|__globals__"
 r"|__mro__"
 r"|__subclasses__"
@@ -46,7 +42,6 @@ r"|os\.system"
 r"|subprocess\."
 r"|popen\("
 
-# java template engines
 r"|runtime\.getruntime"
 r"|processbuilder"
 r"|class\.forname"
@@ -54,11 +49,9 @@ r"|t\(java\.lang\.runtime\)"
 r"|freemarker\.template"
 r"|velocity\.engine"
 
-# node template engines
 r"|require\("
 r"|process\.mainmodule"
 
-# ruby template engines
 r"|kernel\.system"
 r"|open\("
 r")",
