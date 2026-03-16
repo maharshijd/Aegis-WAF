@@ -10,6 +10,8 @@ services:
     container_name: python_waf
     depends_on:
       - backend
+    volumes:
+      - ./waf/logs:/app/logs
 
   proxy:
     image: nginx
