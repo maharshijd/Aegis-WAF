@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-BACKEND = "http://backend:80"
+BACKEND = "http://backend"
 
 
 def log_attack(ip, attack_type, payload):
