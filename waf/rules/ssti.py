@@ -71,5 +71,5 @@ print(detect_ssti("<%= 7*7 %>"))                             # True
 print(detect_ssti("{{self.__init__.__globals__}}"))          # True
 print(detect_ssti("${T(java.lang.Runtime).getRuntime()}"))   # True
 print(detect_ssti("${{<%[%\"'}}%\\."))                       # True
-print(detect_ssti("hello world {7*7}"))                            # False
+print(detect_ssti("hello world {7*7}"))                      # False
 '''

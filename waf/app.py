@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-BACKEND = "http://backend"
+BACKEND = "https://identity.bugcrowd.com/login?user_hint=tracker"
 
 
 def log_attack(ip, attack_type, payload):
