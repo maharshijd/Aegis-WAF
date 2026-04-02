@@ -22,7 +22,6 @@ if port == "":
 
 print("\nConfiguring Firewall...\n")
 
-# ensure http present
 if not backend.startswith("http"):
     backend = "http://" + backend
 
@@ -45,7 +44,6 @@ data = re.sub(
 with open(app_file, "w") as f:
     f.write(data)
 
-# update port mapping
 compose_file = "docker-compose.yml"
 
 with open(compose_file, "r") as f:
