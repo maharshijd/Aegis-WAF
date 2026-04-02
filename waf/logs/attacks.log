@@ -1,0 +1,7 @@
+[2026-03-30 04:16:18.457840] IP: 172.18.0.4 | Attack: ['XSS'] | Payload: http://localhost/?username=%3Cscript%3Ealert%280%29%3C%2Fscript%3E&password=1234567890username=%3Cscript%3Ealert%280%29%3C%2Fscript%3E&password=1234567890
+[2026-03-30 04:16:45.669057] IP: 172.18.0.4 | Attack: ['SQL Injection'] | Payload: http://localhost/?username=%27+or+1%3D1%3B%23&password=1234567890username=%27+or+1%3D1%3B%23&password=1234567890
+[2026-03-30 04:16:57.138280] IP: 172.18.0.4 | Attack: ['Command Injection'] | Payload: http://localhost/?username=%3Bls&password=1234567890username=%3Bls&password=1234567890
+[2026-03-30 04:17:22.283811] IP: 172.18.0.4 | Attack: ['LFI'] | Payload: http://localhost/?username=..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=1234567890username=..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=1234567890
+[2026-03-30 04:17:30.639487] IP: 172.18.0.4 | Attack: ['LFI'] | Payload: http://localhost/?username=..%2F..%2F..%2F..%2Fetd&password=1234567890username=..%2F..%2F..%2F..%2Fetd&password=1234567890
+[2026-03-30 04:51:49.737363] IP: 172.18.0.4 | Attack: ['XSS'] | Payload: http://sanded-nontransforming-young.ngrok-free.dev/?username=%3Cscript%3E&password=1234username=%3Cscript%3E&password=1234
+[2026-03-31 14:29:19.631653] IP: 172.18.0.4 | Attack: ['XSS'] | Payload: http://sanded-nontransforming-young.ngrok-free.dev/?username=%3Cscript%3E&password=username=%3Cscript%3E&password=
