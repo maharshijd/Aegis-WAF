@@ -1,0 +1,9 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# This handles React Router's client-side routing so refreshing the page doesn't throw a 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

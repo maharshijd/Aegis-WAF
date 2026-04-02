@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-BACKEND = "http://backend"
+BACKEND = "http://host.docker.internal:5001"
 
 
 def log_attack(ip, attack_type, payload):
