@@ -25,9 +25,10 @@ print("\nConfiguring Firewall...\n")
 if not backend.startswith("http"):
     backend = "http://" + backend
 
-# convert localhost for docker networking
-backend = backend.replace("localhost", "host.docker.internal")
-backend = backend.replace("127.0.0.1", "host.docker.internal")
+# convert localhost ONLY if backend is local API
+if "localhost" in backend or "127.0.0.1" in backend:
+    backend = backend.replace("localhost", "host.docker.internal")
+    backend = backend.replace("127.0.0.1", "host.docker.internal")
 
 # update backend in app.py
 app_file = "waf/app.py"

@@ -1,0 +1,3 @@
+[2026-04-03 06:58:13.644682] IP: 172.18.0.4 | Attack: ['XSS'] | Payload: http://localhost/posts{"author":"123456","text":"<script>\n\n"}
+[2026-04-03 06:58:39.791857] IP: 172.18.0.4 | Attack: ['XSS'] | Payload: http://localhost/posts{"author":"123456","text":"<script>"}
+[2026-04-03 07:00:30.310668] IP: 172.18.0.4 | Attack: ['SQL Injection'] | Payload: http://localhost/posts{"author":"123456","text":"' union select 1,3,4; --"}
